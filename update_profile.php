@@ -14,6 +14,7 @@ $data = [
     ]
 ];
 
+// KITA LAKUKAN PENGECEKAN DULU APAKAH $_POST['NAMA'] DLL DI LAKUKAN REQUEST
 if (isset($_POST['nama']) AND isset($_POST['email']) AND isset($_POST['telp']) AND isset($_POST['password'])) {
     foreach ($data as $k => $v){
         if ($data[$k]['nama']=='kamu'){
