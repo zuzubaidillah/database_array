@@ -3,26 +3,28 @@ $data = [
     [
         "nama" => "a",
         "email" => "b",
-    ],
-    [
-        "nama" => "admin",
-        "email" => "admin",
+        "password" => "a",
     ]
 ];
+
+//mendeklarasikan permintaan dari client
 $n = $_GET['nama'];
 $p = $_GET['password'];
-if ($n==$data[1]['nama']) {
+
+if ($n==$data[0]['nama']) {
     $hasil = [
         "status_code" => 200,
-        "nama" => $n,
-        "password" => $p,
+        "data" => [
+            "user" => $data[0],
+            "message" => "data ditemukan"
+        ]
     ];
 } else {
     $hasil = [
         "status_code" => 400,
         "data" => [
             "user" => null,
-            "message" => "Gagal Daftar"
+            "message" => "nama tidak ada"
         ]
     ];
 }

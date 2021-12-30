@@ -16,11 +16,16 @@ $data = [
 
 // KITA LAKUKAN PENGECEKAN DULU APAKAH $_POST['NAMA'] DLL DI LAKUKAN REQUEST
 if (isset($_POST['nama']) AND isset($_POST['email']) AND isset($_POST['telp']) AND isset($_POST['password'])) {
+    $nm = "kamu";
+    //    cek apakah sudah ada nama
     foreach ($data as $k => $v){
-        if ($data[$k]['nama']=='kamu'){
+        if ($data[$k]['nama']==$nm){
             $update_id = $k;
+        }else{
+//            proses simpan data
         }
     }
+
     $data_register = [
         "nama" => $_POST['nama'],
         "email" => $_POST['email'],
